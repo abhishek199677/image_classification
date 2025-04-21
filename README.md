@@ -1,5 +1,5 @@
-# image_classification
-image_classification using cnn 
+# image_classification using CNN
+
 
 
 ### A TensorFlow/Keras CNN model for multi-class image classification, featuring a 6-layer convolutional architecture with max-pooling, dropout regularization, and automatic data loading from directories
