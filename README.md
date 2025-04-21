@@ -2,7 +2,7 @@
 
 
 
-#### A TensorFlow/Keras CNN model for multi-class image classification, featuring a 6-layer convolutional architecture with max-pooling, dropout regularization, and automatic data loading from directories
+### A TensorFlow/Keras CNN model for multi-class image classification, featuring a 6-layer convolutional architecture with max-pooling, dropout regularization, and automatic data loading from directories
 
 # 📌 Overview
 This repository contains a Convolutional Neural Network (CNN) implemented in TensorFlow/Keras for image classification tasks. The model takes 128x128 RGB images as input and classifies them into multiple categories using a deep learning architecture.
