@@ -61,4 +61,6 @@ Run the script to train and save the model
 
 Model will be saved as image_cnn_classifier.h5
 
-
+conda create -n cnn python 3.10 -y  
+conda activate cnn
+pip install -r requirements.txt
