@@ -9,11 +9,18 @@ model = load_model(MODEL_PATH)
 
 class_names = ['anu','bharti','deepak','manidhar','sudh']
 
-st.set_page_config(page_title = "my student image class",layout = 'centered')
+st.set_page_config(page_title = "🖼️ Image Classification App",layout = 'centered',  page_icon="📷")
 
 st.sidebar.title("upload your image")
 
-st.markdown("this application will try to give you a classification of your image its build based on vanil CNN architecture")
+st.markdown("""
+This application uses a **Convolutional Neural Network (CNN)** to classify images into one of the following categories:
+- Anusha
+- Bharat
+- Naveen
+- Suresh
+- Vishal
+""")
 
 upload_file = st.sidebar.file_uploader("choose your image" ,  type = ["jpg" , 'jpeg','png'])
 
@@ -32,7 +39,10 @@ if upload_file is not None :
     
     st.success(f"this image is predicted to be :{predicted_class}")
     
-    st.subheader("below is your confidence score for all the class ")
+    st.subheader("Welcome to Image Classifier! 👋")
     print(prediction)
     for index,score in  enumerate(prediction[0]):
         st.write(f"{class_names[index]}: {score}")
+
+    st.markdown("---")
+st.markdown("🔍 Built with Streamlit & TensorFlow | 🧠 CNN Architecture")
