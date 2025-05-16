@@ -58,10 +58,10 @@ image_cnn_classifier.h5  # Saved model
 Organize images in data/train and data/val with class-specific subdirectories
 
 ## Workflow
-Training
-Saving-Model
-streamlit app
-Predicition
+* Training
+* Saving-Model
+* streamlit app
+* Predicition
 
 Run the script to train and save the model
 
