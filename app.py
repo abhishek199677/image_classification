@@ -26,18 +26,19 @@ upload_file = st.sidebar.file_uploader("choose your image" ,  type = ["jpg" , 'j
 
 from PIL import Image
 
-if upload_file is not None :
+# this will upload the image in 3 channels RGB format in streamlit application
+if upload_file is not None :  
     img = Image.open(upload_file).convert('RGB')
     st.image(img,caption="your image")
     
-    image_resized = img.resize((128,128))
-    img_array = image.img_to_array(image_resized)/255.0
-    image_batch = np.expand_dims(img_array,axis=0)
+    image_resized = img.resize((128,128))  #pre-processing
+    img_array = image.img_to_array(image_resized)/255.0  #converting the image to numpy array
+    image_batch = np.expand_dims(img_array,axis=0)  
     
-    prediction = model.predict(image_batch)
-    predicted_class = class_names[np.argmax(prediction)]
+    prediction = model.predict(image_batch)  #prediction 
+    predicted_class = class_names[np.argmax(prediction)]  #predicting the highest probability class
     
-    st.success(f"this image is predicted to be :{predicted_class}")
+    st.success(f"This image is predicted to be :{predicted_class}")
     
     st.subheader("Welcome to Image Classifier! 👋")
     print(prediction)
